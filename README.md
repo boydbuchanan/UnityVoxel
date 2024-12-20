@@ -3,6 +3,16 @@ Adds "native" support to MagicaVoxel ".vox" files by creating models / textures 
 
 Has methods to partially build meshes, useful for dynamic build systems and destroying parts of models.
 
+![Voxel Unity](VoxelBuild.png)
+
+# How to Use
+
+Copy All Files To Directory
+Copy Resources/Materials
+
+Install Mathematics, Burst, Unity.Collections from package manager
+Build System Controls Uses old input system, change settings to Both or replace.
+
 ### Forked from MagicaVoxel-Unity-Importer
 
 [https://github.com/korobetski/MagicaVoxel-Unity-Importer](https://github.com/korobetski/MagicaVoxel-Unity-Importer)

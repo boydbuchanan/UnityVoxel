@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Events;
 
-[ExecuteInEditMode]
 public class VoxelBuildSystem : VoxelObject
 {
     public Transform targetingTransform;  // The player's camera
@@ -84,6 +82,7 @@ public class VoxelBuildSystem : VoxelObject
     {
         if (!targetingTransform)
             return;
+
         // Perform a raycast
         if (Physics.Raycast(targetingTransform.position, targetingTransform.forward, out RaycastHit hit, maxDistance, voxelLayer))
         {
@@ -93,7 +92,7 @@ public class VoxelBuildSystem : VoxelObject
             var negatedNormal = -hitNormal;
             var hitLocalPoint = transform.InverseTransformPoint(hitPoint + (negatedNormal * hitAdjustment));
             hitPosition = hitLocalPoint.ToInt3(true);
-            if(!voxels.ContainsKey(hitPosition.Value)){
+            if(voxels == null || !voxels.ContainsKey(hitPosition.Value)){
                 hitPosition = null;
             }
             
@@ -126,6 +125,8 @@ public class VoxelBuildSystem : VoxelObject
         {
             // Place the voxel at the highlighted position
             int3 voxelPosition = highlightedPosition.Value;
+            if(voxels == null)
+                voxels = new Dictionary<int3, Voxel>();
 
             if (!voxels.ContainsKey(voxelPosition))
             {
