@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7947014798130915913}
@@ -53,6 +53,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 426335475833499702}
   meshCollider: {fileID: 3096999772776258345}
   OnlyLoadActive: 0
+  OverrideWorldScale: 0
   NumActive: 0
   TotalVoxels: 267
   debugProps:
@@ -64,7 +65,8 @@ MonoBehaviour:
     InactiveAlpha: 0.1
     DistanceCutoff: 0.1
     forceRaycastDebug: 0
-  VoxelAssetReference: {fileID: 8966217128185983596, guid: c2bda80bb2e42f946963d3efab042808, type: 3}
+  VoxelAssetReference: {fileID: 8966217128185983596, guid: c2bda80bb2e42f946963d3efab042808,
+    type: 3}
 --- !u!33 &2610349771598436460
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -167,7 +169,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.233408, y: -6.345971, z: -4.359976}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4168928495296507070}
@@ -191,6 +193,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 1871655572665229500}
   meshCollider: {fileID: 3369226941352760752}
   OnlyLoadActive: 1
+  OverrideWorldScale: 0
   NumActive: 200
   TotalVoxels: 267
   debugProps:
@@ -202,7 +205,8 @@ MonoBehaviour:
     InactiveAlpha: 0.1
     DistanceCutoff: 10
     forceRaycastDebug: 0
-  VoxelAssetReference: {fileID: 8966217128185983596, guid: c2bda80bb2e42f946963d3efab042808, type: 3}
+  VoxelAssetReference: {fileID: 8966217128185983596, guid: c2bda80bb2e42f946963d3efab042808,
+    type: 3}
   FullVoxelAsset: {fileID: 445579014616121753}
   DisableFullWhenFullyLoaded: 1
   LastShownVoxels: 200
@@ -466,6 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d503ebf55c92948be6f17a908daf72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _persistent: 0
   Scale: 1
 --- !u!1 &3269592674741656299
 GameObject:
@@ -497,7 +502,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.7887583, y: 12.377999, z: -8.52255}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4122769079002345971}
@@ -520,6 +525,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 9217427975153546239}
   meshCollider: {fileID: 3259297586737881990}
   OnlyLoadActive: 0
+  OverrideWorldScale: 0
   NumActive: 0
   TotalVoxels: 0
   debugProps:
@@ -735,8 +741,8 @@ MonoBehaviour:
     axisZoom: Mouse ScrollWheel
     keyAdd: 323
     keyRemove: 324
-    keyMoveUp: 113
-    keyMoveDown: 101
+    keyMoveUp: 101
+    keyMoveDown: 113
     inputLookX: 0
     inputLookY: 0
     inputMoveX: 0
@@ -823,7 +829,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -69.6, y: -6.345971, z: -2.74}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4122769079002345971}
@@ -846,6 +852,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 7670028077102516594}
   meshCollider: {fileID: 3255937413865357457}
   OnlyLoadActive: 0
+  OverrideWorldScale: 0
   NumActive: 0
   TotalVoxels: 8749
   debugProps:
@@ -857,7 +864,8 @@ MonoBehaviour:
     InactiveAlpha: 0.1
     DistanceCutoff: 10
     forceRaycastDebug: 1
-  VoxelAssetReference: {fileID: 4914026220519971654, guid: 8f3eeec9ffbceb94e8570cb9df7ae75e, type: 3}
+  VoxelAssetReference: {fileID: 4914026220519971654, guid: 8f3eeec9ffbceb94e8570cb9df7ae75e,
+    type: 3}
 --- !u!33 &8636290980422947668
 MeshFilter:
   m_ObjectHideFlags: 0

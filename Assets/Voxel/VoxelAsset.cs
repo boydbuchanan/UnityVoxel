@@ -42,7 +42,7 @@ public class VoxelAsset : VoxelObject
     /// Start Mesh Methods
     public override void SetMaterial(Material newMat)
     {
-        if(UseColorFromAsset)
+        if(UseColorFromAsset && VoxelAssetReference.palette != null)
             newMat.mainTexture = VoxelAssetReference.palette.GetTexture();
         base.SetMaterial(newMat);
     }

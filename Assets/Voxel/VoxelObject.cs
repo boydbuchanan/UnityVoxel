@@ -12,13 +12,14 @@ public class VoxelObject : MonoBehaviour
 {
     
     public Material VoxelMaterial;
-    [SerializeField] protected bool UseColorFromAsset = true;
+    [SerializeField, Tooltip("Changes Mesh UVs")] protected bool UseColorFromAsset = true;
     
     [SerializeField] protected MeshFilter meshFilter;
     [SerializeField] protected MeshRenderer meshRenderer;
     [SerializeField] protected MeshCollider meshCollider;
     
-    [SerializeField] protected bool OnlyLoadActive;
+    [SerializeField, Tooltip("Check For Partial Loading")] protected bool OnlyLoadActive;
+    [SerializeField, Tooltip("Check For Child Objects")] protected bool OverrideWorldScale;
     [SerializeField] protected int NumActive;
     [SerializeField] protected int TotalVoxels;
 
@@ -33,7 +34,7 @@ public class VoxelObject : MonoBehaviour
         if (meshCollider == null)
             meshCollider = GetComponent<MeshCollider>();
         // set scale to world scale
-        if(VoxelWorld.Instance != null)
+        if(VoxelWorld.Instance != null && !OverrideWorldScale)
             transform.localScale = VoxelWorld.Instance.VoxelScale;
 
         if(_numActive != NumActive){
